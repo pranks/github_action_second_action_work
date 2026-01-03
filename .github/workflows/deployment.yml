@@ -18,8 +18,9 @@ jobs:
 
     
     deployment:
-         runs-on: ubuntu-latest
-         steps:
+        needs: [test]
+        runs-on: ubuntu-latest
+        steps:
             - name: get code
               uses: actions/checkout@v6
             - name: install node js
