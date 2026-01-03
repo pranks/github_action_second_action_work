@@ -6,5 +6,12 @@ jobs:
         steps:
             - name: get code
               uses: actions/checkout@v6
-            - name: code was downloaded
-              run: echo "code was downloaded on runner"
+            - name: install node js
+              uses: actions/setup-node@v6
+              with:
+                node-version: 18
+            - name: Install Dependencies
+              run: npm ci
+            - name: Run Test
+              run: |
+                npm test
