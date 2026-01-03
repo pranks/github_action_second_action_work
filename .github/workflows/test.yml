@@ -4,5 +4,7 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
-            - name: first step
-              run: echo "first step"
+            - name: get code
+              uses: actions/checkout@v6
+            - name: code was downloaded
+              run: echo "code was downloaded on runner"
