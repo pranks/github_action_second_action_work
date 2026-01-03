@@ -1,0 +1,9 @@
+name: Output of COntext Variable
+on: push
+jobs:
+    Output:
+        runs-on: ubuntu-latest
+        steps:
+            - name: output github context
+              run: echo "${{ toJSON(github)}}"
+
